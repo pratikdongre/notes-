@@ -1,48 +1,3 @@
-// import { useState, useEffect } from "react";
-// import "./App.css";
-// import WebPage from "./vision/WebPage";
-// import Android from "./vision/Android";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-// function App() {
-//   const [dimension, setDimension] = useState(window.innerWidth);
-//   const [selected, setSelected] = useState("");
-//   // const [notes, setNotes] = useState([]);
-
-//   useEffect(() => {
-//     setSelected(localStorage.getItem("selected") || "");
-//   }, [selected]);
-
-//   const checkDimension = () => {
-//     setDimension(window.innerWidth);
-//   };
-
-//   window.addEventListener("resize", checkDimension);
-
-//   return (
-//     <div className="App">
-//       {dimension > 500 ? (
-//         <WebPage />
-//       ) : (
-//         <BrowserRouter>
-//           <Routes>
-//             <Route
-//               path="/"
-//               element={<Android selected={selected} setSelected={setSelected} />}
-//             />
-//           </Routes>
-//         </BrowserRouter>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
-
-
 
 import React, { useState, useEffect } from "react";
 import "./App.css";
@@ -67,7 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* Add the 'basename' prop to BrowserRouter */}
+      <BrowserRouter basename="/notes-app">
         <Routes>
           {dimension > 500 ? (
             <Route path="/" element={<WebPage />} />
