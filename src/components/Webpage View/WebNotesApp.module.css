@@ -1,0 +1,291 @@
+.chatApp {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left side (contacts/people) */
+.noteGroups {
+  background-color: #FFFFFF;
+  padding: 40px;
+  width: 20%;
+}
+
+.Content {
+  position: relative;
+  background-color: #F7ECDC;
+  width: 76%;
+}
+
+.bgImage {
+  width: 50%; /* Remove single quotes around percentages */
+  height: 40%; 
+  margin-top: 9.6rem;
+  margin-left: 17rem;
+}
+
+h1 {
+  font-size: 40px;
+   position: absolute;
+  margin-bottom: 20px;
+}
+
+.pocketnotes {
+  font-size: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top:  0.1rem;
+  margin-left: 28rem;
+}
+
+.description {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top: -2rem;
+  margin-left: 18rem;
+}
+
+.FooterContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 32rem;
+  margin-top: 10.5rem;
+}
+
+.FooterContainer img {
+  width: 14px;
+  margin-right: 0.3rem; 
+}
+
+.FooterContainer p {
+  font-size: 16px; /* Adjust font size as needed */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.button {
+  background-color: #000000;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  width: 15rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+  font-size: 22px;
+  margin-top: 5.5rem;
+}
+
+.button img {
+  margin-right: 25px; 
+  width: 20px;
+}
+
+
+
+
+/* Change the border color to indicate selection */
+  /* .selectedGroup {  
+  background-color: 2px solid #F7ECDC; 
+  } */
+
+.groupList {
+list-style: none;
+padding: 80px 20px;
+text-align: center;
+margin-top: 1rem;
+}
+
+.groupItem {
+cursor: pointer;
+display: flex; /* Add flex display for row layout */
+align-items: center; /* Center elements vertically */
+margin-bottom: 8px;
+border-radius: 60px;
+transition: background-color 0.3s ease;
+font-size: 18px;
+height: 60px;
+/* width: 60px; Remove fixed width */
+}
+
+.circleWrapper {
+width: 60px; /* Set a fixed width for the circle */
+display: flex;
+justify-content: center; /* Center the circle horizontally */
+align-items: center; /* Center the circle vertically */
+margin-right: 10px; /* Add margin between circle and group name */
+}
+
+.initialCircle {
+border-radius: 50%; /* Make it a circle */
+width: 40px; /* Set the circle's size */
+height: 40px;
+display: flex;
+justify-content: center; /* Center initials horizontally */
+align-items: center; /* Center initials vertically */
+color: white; /* Text color */
+font-weight: bold;
+font-size: large;
+height: 55px;
+width: 55px;
+}
+
+.groupName {
+ 
+flex: 1; /* Allow the group name to take remaining space */
+overflow: hidden; /* Hide overflowing text */
+text-overflow: ellipsis; /* Add ellipsis for long names */
+white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+.groupNameTransparent {
+
+  transition: max-width 0.5s ease;
+  white-space: nowrap;
+  font-size:25px ;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+background-color: transparent; /* Make the background color transparent */
+}
+
+.groupItem:hover {
+   
+background-color: #F7ECDC;
+width: 22rem;
+
+}
+
+/* Right side (messages/notes) */
+  
+
+  /* Styles for notes */
+  /* .rightContent {
+    
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  height: 50%;
+  background-color: #000;
+
+
+  } */
+  .rightContent{
+    position: absolute;
+    overflow: hidden;
+  }
+
+
+/* thsi is one the top of the right contnet  */
+.rightContent h2 {
+  font-size: 28px;
+  background-color: #E8E8E8;
+  width: 54vw;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 1.5rem 10rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  /* position: fixed; */
+  top: 0; /* Stick to the top */
+  left: 25rem;
+  right: 0;
+  z-index: 1; /* Ensure it's above the scrolling content */
+}
+
+.logo{
+  position: absolute;
+  margin-top: 0.9rem;
+  margin-left: 6rem;
+}
+
+/* border of the text are */
+.noteTextArea {
+  width: 66.5rem;
+  height: 150px;
+  resize: none;
+  border: 25px solid #E8E8E8;
+  padding: 10px;
+  margin-top: 0; /* Remove margin-top */
+  margin-left: 0rem;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: medium;
+  position: fixed; /* Fix the textarea at the bottom */
+  bottom: 0;
+  /* overflow: hidden; */
+  /* cursor: scroll; */
+}
+
+.noteEditorContainer {
+  position: relative;
+}
+
+.noteTextArea::-webkit-scrollbar {
+  width: 0.1rem; /* Set the width to a very small value */
+  height: 0.1rem; /* Set the height to a very small value */
+}
+
+
+
+.noteTextArea::placeholder {
+  color: #9A9A9A;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: medium;
+  padding-top: 10px;
+ 
+}
+
+.noteList {
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0 10rem; /* Reset margin to 0 */
+  padding: 0; /* Reset padding to 0 */
+  overflow-y: auto;
+  max-height: 700px;
+}
+
+.noteList::-webkit-scrollbar {
+  width: 0.1rem; /* Set the width to a very small value */
+  height: 0.1rem; /* Set the height to a very small value */
+}
+
+.noteItem {
+  background-color: #F7ECDC;
+  padding: 20px 20px 0 140px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 700px;
+  font-size: 1.2rem;
+  overflow-y: hidden;
+  word-break: break-all;
+}
+
+.noteItem p {
+  position: absolute;
+  font-size: 13px;
+  color: #777;
+  margin-top: -80px;
+  margin-left: -7rem;
+}
+
+/* Save button styles */
+.saveButton {
+  background-color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  position: fixed;
+  right: 2rem;
+  bottom: 2.5rem;
+}

@@ -1,0 +1,87 @@
+.popup {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999; 
+  width: 17rem; 
+  height: 9rem;
+  border-radius: 2rem;
+}
+
+/* Styles for the close icon */
+/* Styles for the heading */
+.popup h2 {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Styles for the input field */
+.popup p {
+  position: absolute;
+  font-size: 18px;
+  margin-top: 0.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+}
+
+/* Styles for the input field */
+.popup input[type="text"] {
+  width: 58%;
+  padding: 3px 0.5rem  ;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  /* margin-bottom: 33px; */
+  margin-left: 6rem;
+  margin-top: 0.1rem;
+
+}
+
+
+/* Styles for the "Choose color" label */
+.popup .sidebar p {
+  position: absolute;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Styles for the color list container */
+.popup .sidebarList {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  height: auto;
+  list-style: none;
+  margin-left: 5rem;
+  
+}
+
+/* Styles for the color list items */
+.popup .sidebarListItem{
+  border-radius: 50%; 
+  height: 2px;
+  width: 2px; 
+  cursor: pointer;
+  padding: 28px 0 0 1rem; 
+}
+
+/* Styles for the create button */
+.popup .createBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  padding: 6px 5rem;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 2rem;
+}
+
